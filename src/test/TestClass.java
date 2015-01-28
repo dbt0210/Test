@@ -41,8 +41,8 @@ public class TestClass {
 	}
 
 	public static void main(String[] args) {
-		test2();
-		test1(); //throws:
+		test2(); // http://puu.sh/f9A9R/da22515ebc.png
+		test1(); // http://puu.sh/fa01P/23d2e18936.png throws:
 //		Exception in thread "main" java.lang.reflect.UndeclaredThrowableException
 //		at com.sun.proxy.$Proxy1.compareTo(Unknown Source)
 //		at java.util.TreeMap.compare(Unknown Source)
