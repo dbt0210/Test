@@ -3,11 +3,11 @@ package test;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-public class MyInvocationHandler implements InvocationHandler{
+public class MyInvocationHandler<T> implements InvocationHandler{
 
-	Object internalObject;
+	T internalObject;
 	
-	public MyInvocationHandler(Object o) {
+	public MyInvocationHandler(T o) {
 		internalObject = o;
 	}
 
@@ -19,7 +19,7 @@ public class MyInvocationHandler implements InvocationHandler{
 				System.out.print(args[i]+(i + 1 < args.length ? ", " : ""));
 			}
 		}
-		System.out.print(")");
+		System.out.println(")");
 		return m.invoke(internalObject, args);
 	}
 }
